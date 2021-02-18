@@ -1,0 +1,38 @@
+@keyframes rotate-cw {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo-circle {
+  animation: rotate-cw 14s linear infinite both;
+}
+.soc-icon {
+    .animate {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        transition: all 0.4s cubic-bezier(.49,.44,.43,1);
+    }
+    &:hover {
+        .animate {
+            stroke-dashoffset: 930;
+        }
+    }
+}

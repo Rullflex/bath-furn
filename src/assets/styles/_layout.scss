@@ -1,0 +1,1740 @@
+.s1 {
+    .container {
+        padding-top: 2.0625rem;
+        padding-bottom: 51.5rem;
+    }
+    &__img {
+        &-i1 {
+            width: 19.25rem;
+            position: absolute;
+            left: 0px;
+            top: 22.65rem;
+            filter: blur(10px);
+            &.lazyloaded {
+                filter: unset;
+            }
+        }
+        &-i2 {
+            width: 16.625rem;
+            position: absolute;
+            right: 0px;
+            bottom: 2.0625rem;
+            filter: blur(10px);
+            &.lazyloaded {
+                filter: unset;
+            }
+        }
+        &-circle {
+            width: 7.1875rem;
+            position: absolute;
+            right: -1.9375rem;
+            top: 19.5625rem;
+        }
+    }
+    &__title {
+        margin-bottom: 0.8125rem;
+        text-transform: uppercase;
+        margin-left: 1.375rem;
+        span {
+            font-weight: normal;
+            color: white;
+        }
+    }
+    &__subtitle {
+        width: 13.3125rem;
+        font-size: 1.125rem;
+        line-height: 1.47em;
+        margin-left: 1.375rem;
+    }
+    &__vbu {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 44.6rem;
+        right: 2.5rem;
+        &-txt {
+            padding-left: 0.875rem;
+            width: 11.875rem;
+            line-height: 2rem;
+            font-size: 0.75rem;
+            background: $primary;
+            border-radius: 0.1875rem;
+            margin-right: -1.25rem;
+        }
+        &-play {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5.1875rem;
+            height: 5.1875rem;
+            border-radius: 50%;
+            background: $primary;
+            position: relative;
+            svg {
+                width: 2.0625rem;
+                margin-left: 0.4rem;
+            }
+            &::before {
+                content: '';
+                display: block;
+                @include center-item();
+                width: 6.8125rem;
+                height: 6.8125rem;
+                border-radius: 50%;
+                border: 2px solid #FFFFFF;
+                z-index: -1;
+            }
+        }
+    }
+    &__float-line {
+        &-1 {
+            height: 24.625rem;
+            width: 0.125rem;
+            background: white;
+            position: absolute;
+            left: 10px;
+            top: 2.7rem;
+        }
+        &-3 {
+            height: 6.125rem;
+            width: 0.125rem;
+            background: white;
+            position: absolute;
+            left: 4.625rem;
+            bottom: 0;
+        }
+    }
+    &__mouse {
+        display: none;  
+    }
+    &__icons {
+        display: none;  
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s1 {
+        .container {
+            padding-top: 3rem;
+            padding-bottom: 92.1875rem;
+        }
+        &__img {
+            &-i1 {
+                width: 41.25rem;
+                left: -1.875rem;
+                top: 19.4rem;
+            }
+            &-i2 {
+                width: 39.8125rem;
+                right: 0;
+                bottom: 6.3rem;
+            }
+            &-circle {
+                width: 11.4375rem;
+                right: -0.8rem;
+                top: 13.6rem;
+            }
+        }
+        &__title {
+            margin-bottom: 1.3rem;
+            margin-left: 2rem;
+            span {}
+        }
+        &__subtitle {
+            width: 28.125rem;
+            font-size: 1.375rem;
+            margin-left: 2rem;
+        }
+        &__vbu {
+            flex-direction: row-reverse;
+            top: 63.3rem;
+            right: 11.1rem;
+            &-txt {
+                padding-left: 2rem;
+                width: 13.5625rem;
+                font-size: 0.875rem;
+                margin-right: 0;
+                margin-left: -0.8125rem;
+            }
+            &-play {
+                width: 5.25rem;
+                height: 5.25rem;
+                svg {}
+                &::before {
+                    border: 1px solid #FFFFFF;
+                }
+            }
+        }
+        &__float-line {
+            &-1 {
+                height: 24.625rem;
+                left: 0;
+                top: 2.7rem;
+            }
+            &-2 {
+                height: 17.9375rem;
+                width: 0.125rem;
+                background: white;
+                position: absolute;
+                right: 4.875rem;
+                top: 63rem;
+            }
+            &-3 {
+                height: 10.125rem;
+                left: 7.925rem;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s1 {
+        .container {
+            padding-top: 5.6rem;
+            padding-bottom: 50.6rem;
+        }
+        &__img {
+            &-i1 {
+                left: -2.975rem;
+                top: 4.6rem;
+            }
+            &-i2 {
+                bottom: 3.7rem;
+            }
+            &-circle {
+                right: -7rem;
+                top: 13rem;
+            }
+        }
+        &__title {
+            margin-bottom: 1.4rem;
+            margin-left: 40.3rem;
+            span {}
+        }
+        &__subtitle {
+            margin-left: 40.3rem;
+        }
+        &__vbu {
+            top: 27rem;
+            &-txt {}
+            &-play {
+                svg {}
+                &::before {}
+            }
+        }
+        &__float-line {
+            &-1 {
+                top: -2.8rem;
+            }
+            &-2 {
+                right: 4.1rem;
+                top: 27rem;
+            }
+            &-3 {
+                left: 41.625rem;
+            }
+        }
+        &__mouse {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 44.2rem;
+            left: 24.9rem;
+            svg {
+                // animation: mouse 3s ease-in infinite both;
+            }
+            p {
+                margin-top: 4.2rem;
+                color: #8497B4;
+                transform: rotate(-90deg);
+            }
+        }
+        &__icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 54.5rem;
+            left: 0.5rem;
+            a {
+                margin-bottom: 1rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s1 {
+        .container {
+            padding-top: 8.2rem;
+            padding-bottom: 75.5rem;
+        }
+        &__img {
+            &-i1 {
+                width: 59.375rem;
+                left: -14.075rem;
+                top: 4.8rem;
+            }
+            &-i2 {
+                width: 58.1875rem;
+                bottom: 5.2rem;
+                right: 5.4rem;
+            }
+            &-circle {
+                right: -0.3rem;
+                top: 27.1rem;
+            }
+        }
+        &__title {
+            width: 62.5rem;
+            margin-bottom: 3.9rem;
+            margin-left: 49rem;
+            span {}
+        }
+        &__subtitle {
+            font-size: 1.625rem;
+            line-height: 1.73em;
+            margin-left: 50rem;
+        }
+        &__vbu {
+            top: 44.3rem;
+            right: 26rem;
+            &-txt {
+                width: 15.1875rem;
+                line-height: 2.875rem;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                margin-left: -1.0625rem;
+            }
+            &-play {
+                width: 7.625rem;
+                height: 7.625rem;
+                svg {
+                    width: 3rem;
+                    margin-left: 0.8rem;
+                }
+                &::before {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+        }
+        &__float-line {
+            &-1 {
+                height: 28.75rem;
+                top: -0.6rem;
+                left: 3.1rem;
+            }
+            &-2 {
+                height: 26.1875rem;
+                right: 11.3rem;
+                top: 44rem;
+            }
+            &-3 {
+                height: 14.8125rem;
+                left: 45.225rem;
+            }
+        }
+        &__mouse {
+            top: 61.3rem;
+            left: 23.7rem;
+            svg {}
+            p {}
+        }
+        &__icons {
+            top: 72.6rem;
+            left: 1.2rem;
+            a {}
+        }
+    }
+}
+.s2 {
+    padding-top:  3.75rem;
+    padding-bottom: 6.3rem;
+    &__img {
+        &-circle {
+            display: none;
+        }
+    }
+    &__title {
+        font-size: 2.5rem;
+        margin-left: 1.3rem;
+        margin-bottom: 4.3rem;
+    }
+    &__slider {
+        &-container {
+            overflow: visible;
+        }
+        &-items {
+
+        }
+        &-item {
+            padding-right: 1.0625rem;
+            &--1 {}
+            &--2 {}
+            &--3 {}
+        }
+        &-body {
+            width: 40.0625rem;
+            height: 31.3125rem;
+            border: 0.0625rem solid #CFCFCF;
+            position: relative;
+        }
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slidenav {
+            margin-top: 1.7rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s2 {
+        padding-top:  10.9rem;
+        padding-bottom: 21.5625rem;
+        &__img {
+            &-circle {
+                display: block;
+                position: absolute;
+                width: 11.4375rem;
+                bottom: -15rem;
+                right: -5.5rem;
+            }
+        }
+        &__title {
+            margin-left: 0.3rem;
+            margin-bottom: 4.3rem;
+        }
+        &__slider {
+            &-container {
+                overflow: visible;
+            }
+            &-items {
+    
+            }
+            &-item {
+                &--1 {}
+                &--2 {}
+                &--3 {}
+            }
+            &-body {}
+            &-bg {}
+            .slidenav {
+                margin-top: 2.6rem;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s2 {
+        padding-top:  13.9rem;
+        padding-bottom: 14.75rem;
+        &__img {
+            &-circle {
+                bottom: -11.9rem;
+                right: -1.5rem;
+            }
+        }
+        &__title {
+            font-size: 4.375rem;
+            margin-left: 1.6rem;
+            margin-bottom: 5.9rem;
+        }
+        &__slider {
+            &-container {
+                margin-left: -7rem;
+                // width: 50rem;
+                overflow: visible;
+            }
+            &-items {
+    
+            }
+            &-item {
+                padding-right: 1.1875rem;
+                &--1 {}
+                &--2 {}
+                &--3 {}
+            }
+            &-body {
+                width: 45rem;
+                height: 35.125rem;
+            }
+            &-bg {}
+            .slidenav {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+.s3 {
+    background: white;
+    padding-top: 4.5625rem;
+    padding-bottom: 3.5625rem;
+    color: $text-dark;
+    &__block {
+        $self: &;
+        position: relative;
+        &-head {
+            padding-left: 1.25rem;
+        }
+        &-title {
+            margin-bottom: 0.5rem;
+        }
+        &-subtitle {
+            font-size: 0.875rem;
+            p {
+                margin-bottom: 0.4rem;
+            }
+        }
+        &-img {
+            pointer-events: none;
+            width: 100%;
+            filter: blur(10px);
+            &.lazyloaded {
+                filter: unset;
+            }
+        }
+        &-line {
+            width: 0.125rem;
+            background: $primary;
+            position: absolute;
+            left: 0;
+            top: 0.4rem;
+            &::after {
+                content: '';
+                display: block;
+                width: 0.5625rem;
+                height: 0.5625rem;
+                border-radius: 50%;
+                background: $primary;
+                @include center-item-x();
+                bottom: 0;
+            }
+        }
+        &-1 {
+            margin-bottom: 2.7rem;
+            #{$self + -subtitle} {
+                width: 12.8125rem;
+                line-height: 1.6em;
+                margin-bottom: 1.25rem;
+            }
+            #{$self + -line} {
+                height: 10.3875rem;
+            }
+        }
+        &-2 {
+            margin-bottom: 4.6rem;
+            #{$self + -subtitle} {
+                width: 15.3125rem;
+                line-height: 1.5em;
+                margin-bottom: 1.25rem;
+            }
+            #{$self + -set} {
+                pointer-events: none;
+                width: 13.6875rem;
+                height: 3.8125rem;
+                margin-bottom: 1.3rem;
+            }
+            #{$self + -line} {
+                height: 15.2rem;
+            }
+        }
+        &-3 {
+            margin-bottom: 4.25rem;
+            #{$self + -title} {
+                margin-bottom: 1rem;
+            }
+            #{$self + -subtitle} {
+                width: 12.5rem;
+                line-height: 1.2em;
+                margin-bottom: 2.375rem;
+            }
+            #{$self + -line} {
+                height: 13.7rem;
+            }
+        }
+        &-4 {
+            #{$self + -title} {
+                margin-bottom: 1rem;
+            }
+            #{$self + -subtitle} {
+                width: 15.625rem;
+                line-height: 1.23em;
+                margin-bottom: 2.1875rem;
+            }
+            #{$self + -line} {
+                height: 16.7625rem;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s3 {
+        padding-top: 6.5625rem;
+        padding-bottom: 4.25rem;
+        &__block {
+            $self: &;
+            &-head {
+                padding-left: 9.125rem;
+            }
+            &-title {
+                margin-bottom: 1.875rem;
+            }
+            &-subtitle {
+                font-size: 1.375rem;
+                p {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            &-img {}
+            &-line {
+                left: 5.375rem;
+                top: 0;
+                &::after {
+                    width: 1.375rem;
+                    height: 1.375rem;
+                }
+            }
+            &-1 {
+                margin-bottom: 6rem;
+                #{$self + -subtitle} {
+                    width: 25.375rem;
+                    margin-bottom: 1.125rem;
+                }
+                #{$self + -img} {
+                    width: 52rem;
+                    @include center-item-x('relative');
+                }
+                #{$self + -line} {
+                    height: 25rem;
+                }
+            }
+            &-2 {
+                margin-bottom: 6.9rem;
+                #{$self + -subtitle} {
+                    width: 27.5rem;
+                    line-height: 1.6em;
+                    margin-bottom: 3rem;
+                    p {
+                        margin-bottom: 2.2rem;
+                    }
+                }
+                #{$self + -set} {
+                    width: 24.8125rem;
+                    height: 7rem;
+                    margin-bottom: 3.875rem;
+                    margin-left: 0.4rem;
+                }
+                #{$self + -line} {
+                    height: 31.6875rem;
+                }
+            }
+            &-3 {
+                margin-bottom: 6rem;
+                .s3__block {
+                    &-head {
+                        padding-left: 7.9rem;
+                    }
+                }
+                #{$self + -title} {
+                    margin-bottom: 2.5rem;
+                }
+                #{$self + -subtitle} {
+                    width: unset;
+                    margin-bottom: 4.4rem;
+                }
+                #{$self + -line} {
+                    height: 26.1875rem;
+                }
+            }
+            &-4 {
+                #{$self + -title} {
+                    margin-bottom: 2.5rem;
+                }
+                #{$self + -subtitle} {
+                    width: 31.0625rem;
+                    line-height: 1.4em;
+                    margin-bottom: 4rem;
+                }
+                #{$self + -line} {
+                    height: 30.9375rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s3 {
+        padding-top: 5.1875rem;
+        padding-bottom: 6.125rem;
+        &__block {
+            $self: &;
+            display: flex;
+            justify-content: space-between;
+            &-head {
+                padding-left: 0;
+            }
+            &-title {
+                margin-bottom: 1.875rem;
+            }
+            &-subtitle {
+                p {}
+            }
+            &-img {
+                width: 36.875rem;
+            }
+            &-line {
+                left: 28rem;
+                top: 17.375rem;
+                &::after {
+                    left: 0;
+                    transform: translateY(-50%);
+                    top: 50%;
+                }
+            }
+            &-1 {
+                flex-direction: row-reverse;
+                margin-bottom: 7.5rem;
+                #{$self + -head} {
+                    width: 30.9375rem;
+                }
+                #{$self + -subtitle} {
+                }
+                #{$self + -img} {
+                    margin-top: 1rem;
+                    margin-left: -3.4rem;
+                    width: 42.5rem;
+                    @include center-item-undo();
+                }
+                #{$self + -line} {
+                    height: 0.125rem;
+                    width: 39.5625rem;
+                }
+            }
+            &-2 {
+                margin-bottom: 7.3rem;
+                #{$self + -subtitle} {
+                    margin-bottom: 5.4rem;
+                    p {}
+                }
+                #{$self + -set} {
+                    width: 32.9375rem;
+                    height: 7rem;
+                }
+                #{$self + -line} {
+                    height: 0.125rem;
+                    width: 42rem;
+                    left: 0.4rem;
+                    top: 30.1rem;
+                    &::after {
+                        left: unset;
+                        right: 0;
+                    }
+                }
+            }
+            &-3 {
+                flex-direction: row-reverse;
+                margin-bottom: 7.4rem;
+                .s3__block {
+                    &-head {
+                        padding-left: 0;
+                        width: 30.5rem;
+                    }
+                }
+                #{$self + -title} {
+                }
+                #{$self + -subtitle} {
+                }
+                #{$self + -line} {
+                    height: 0.125rem;
+                    width: 42rem;
+                    left: 31rem;
+                    top: 20rem;
+                }
+            }
+            &-4 {
+                .s3__block {
+                    &-head {
+                        padding-left: 0.3rem;
+                    }
+                }
+                #{$self + -title} {
+                }
+                #{$self + -subtitle} {
+                }
+                #{$self + -line} {
+                    height: 0.125rem;
+                    width: 40.7rem;
+                    left: 0.4rem;
+                    top: 26.3rem;
+                    &::after {
+                        left: unset;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s3 {
+        padding-top: 5.6875rem;
+        padding-bottom: 13.25rem;
+        &__block {
+            $self: &;
+            &-head {}
+            &-title {
+                margin-bottom: 2.25rem;
+            }
+            &-subtitle {
+                font-size: 1.75rem;
+                p {}
+            }
+            &-img {
+                width: 46.875rem;
+            }
+            &-line {
+                left: 35.5rem;
+                top: 26.775rem;
+                &::after {
+                    width: 1.5625rem;
+                    height: 1.5625rem;
+                }
+            }
+            &-1 {
+                justify-content: flex-end;
+                margin-bottom: 19.6rem;
+                #{$self + -head} {
+                    margin-left: 3.2rem;
+                }
+                #{$self + -subtitle} {
+                }
+                #{$self + -img} {
+                    margin-top: -0.5rem;
+                    margin-left: -3.8rem;
+                    width: 54.0625rem;
+                }
+                #{$self + -line} {
+                    width: 47rem;
+                }
+            }
+            &-2 {
+                margin-bottom: 2.8rem;
+                #{$self + -head} {
+                    margin-left: 2.6rem;
+                }
+                #{$self + -title} {
+                    width: 33.75rem;
+                }
+                #{$self + -subtitle} {
+                    width: 33.125rem;
+                    margin-bottom: 5rem;
+                    p {
+                        margin-bottom: 3rem;
+                    }
+                }
+                #{$self + -set} {
+                    width: 43.75rem;
+                    height: 9.1875rem;
+                    margin-left: 0;
+                }
+                #{$self + -img} {
+                    margin-right: -1.1rem;
+                }
+                #{$self + -line} {
+                    width: 58.4rem;
+                    left: 2.8rem;
+                    top: 39.3rem;
+                    &::after {}
+                }
+            }
+            &-3 {
+                justify-content: flex-end;
+                margin-bottom: 11rem;
+                .s3__block {
+                    &-head {
+                        margin-top: 7rem;
+                        margin-left: 7.4rem;
+                        width: unset;
+                    }
+                }
+                #{$self + -title} {
+                }
+                #{$self + -subtitle} {
+                    p {
+                        margin-bottom: 2.1rem;
+                    }
+                }
+                #{$self + -img} {
+                    margin-left: -0.9rem;
+                }
+                #{$self + -line} {
+                    width: 49rem;
+                    left: 40.5rem;
+                    top: 31rem;
+                }
+            }
+            &-4 {
+                .s3__block {
+                    &-head {
+                        margin-top: 8rem;
+                        padding-left: 2.5rem;
+                    }
+                }
+                #{$self + -title} {
+                    margin-bottom: 2.1rem;
+                }
+                #{$self + -subtitle} {
+                    width: 40rem;
+                    p {
+                        margin-bottom: 1.8rem;
+                    }
+                }
+                #{$self + -img} {
+                    width: 47.5rem;
+                    margin-right: -1.6rem;
+                }
+                #{$self + -line} {
+                    width: 54.7rem;
+                    left: 2.4rem;
+                    top: 39.2rem;
+                    &::after {}
+                }
+            }
+        }
+    }
+}
+.s4 {
+    background: white;
+    padding-bottom: 3.5625rem;
+    &__title {
+        color: $text-dark;
+        margin-bottom: 2.3125rem;
+    }
+    &__slider {
+        &-container {
+            overflow: visible;
+        }
+        &-items {
+        }
+        &-item {
+            padding-right: 0.9375rem;
+        }
+        &-body {
+            width: 18.75rem;
+            height: 18.75rem;
+            position: relative;
+        }
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slidenav {
+            margin-left: 1.6rem;
+            margin-top: 3.575rem;
+            p {
+                color: $primary;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s4 {
+        padding-bottom: 6.125rem;
+        &__title {
+            margin-bottom: 3.375rem;
+        }
+        &__slider {
+            &-container {}
+            &-items {}
+            &-item {
+                padding-right: 0.9375rem;
+            }
+            &-body {
+                width: 28.125rem;
+                height: 28.125rem;
+            }
+            &-bg {}
+            .slidenav {
+                margin-left: 4.9375rem;
+                margin-top: 2.625rem;
+                p {}
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s4 {
+        padding-bottom: 8.525rem;
+        &__title {
+            font-size: 2.1875rem;
+            margin-bottom: 3.1rem;
+        }
+        &__slider {
+            &-container {}
+            &-items {}
+            &-item {
+            }
+            &-body {
+            }
+            &-bg {}
+            .slidenav {
+                p {}
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s4 {
+        padding-bottom: 11.1375rem;
+        &__title {
+            font-size: 4.375rem;
+            margin-bottom: 4.2rem;
+            margin-left: 1.5rem;
+        }
+        &__slider {
+            &-container {
+                margin-left: -8.2rem;
+            }
+            &-items {}
+            &-item {
+                padding-right: 1.875rem;
+            }
+            &-body {
+                width: 46.875rem;
+                height: 46.875rem;
+            }
+            &-bg {}
+            .slidenav {
+                margin-left: 4.0625rem;
+                margin-top: 4.625rem;
+                p {}
+            }
+        }
+    }
+}
+.s5 {
+    padding-top: 2.25rem;
+    padding-bottom: 3.1875rem;
+    @include bg(#DFDCD3);
+    &__img {
+        &-bg {
+            width: 20rem;
+            @include center-item-x();
+            bottom: -3.1875rem;
+            z-index: -3;
+        }
+    }
+    &__title {
+        color: $text-dark;
+        margin-left: 1.25rem;
+        margin-bottom: 3.9rem;
+    }
+    &__descr {
+        width: 12rem;
+        font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.2em;
+        color: $primary;
+        margin-left: 1.25rem;
+        margin-bottom: 1.4rem;
+    }
+    &__prep {
+        font-weight: bold;
+        font-size: 1.125rem;
+        color: $primary;
+        position: absolute;
+        top: 12.8125rem;
+        left: 1.8125rem;
+    }
+    &__svg {
+        width: 9.4375rem;
+        margin-left: 1.25rem;
+        margin-bottom: 5.25rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s5 {
+        padding-top: 3.0625rem;
+        padding-bottom: 0.1875rem;
+        &__img {
+            &-bg {
+                width: 43rem;
+                @include center-item-undo();
+                right: 3.125rem;
+                bottom: -3.3rem;
+            }
+        }
+        &__title {
+            margin-left: 5.8125rem;
+            margin-bottom: 5.875rem;
+        }
+        &__descr {
+            width: unset;
+            font-size: 1.5rem;
+            margin-left: 5.875rem;
+            margin-bottom: 2.35rem;
+        }
+        &__prep {
+            font-size: 1.9375rem;
+            top: 15.55rem;
+            left: 5.675rem;
+        }
+        &__svg {
+            width: 15.875rem;
+            margin-left: 5.5rem;
+            margin-bottom: 2.2875rem;
+        }
+        &__btn {
+            margin-left: 5.5rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s5 {
+        padding-top: 7.75rem;
+        padding-bottom: 0;
+        &__img {
+            &-bg {
+                width: 68.375rem;
+                right: 8.5625rem;
+                bottom: -6.9625rem;
+            }
+        }
+        &__title {
+            margin-left: 6.375rem;
+            margin-bottom: 7.0625rem;
+        }
+        &__descr {
+            font-size: 1.875rem;
+            margin-left: 5.875rem;
+            margin-bottom: 2.55rem;
+        }
+        &__prep {
+            font-size: 2.375rem;
+            top: 19.7rem;
+            left: 6.3rem;
+        }
+        &__svg {
+            width: 19.5rem;
+            margin-left: 6rem;
+            margin-bottom: 3.0625rem;
+        }
+        &__btn {
+            margin-left: 6.2rem;
+            margin-bottom: -1.6875rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s5 {
+        padding-top: 4.8rem;
+        padding-bottom: 2rem;
+        &__img {
+            &-bg {
+                width: 105rem;
+                right: 6.4rem;
+                bottom: -7.4rem;
+            }
+        }
+        &__title {
+            line-height: 4.125rem;
+            margin-left: 8.1875rem;
+            margin-bottom: 10.125rem;
+        }
+        &__descr {
+            font-size: 2.3125rem;
+            margin-left: 8.3875rem;
+            margin-bottom: 5.2875rem;
+        }
+        &__prep {
+            font-size: 2.9375rem;
+            top: 27.4rem;
+            left: 9.1rem;
+        }
+        &__svg {
+            width: 24.5625rem;
+            margin-left: 9.1rem;
+            margin-bottom: 12.625rem;
+        }
+        &__btn {
+            margin-left: 9rem;
+            margin-bottom: 0;
+        }
+    }
+}
+.s6 {
+    padding-top: 4.4rem;
+    padding-bottom: 2.4375rem;
+    @include bg(white);
+    &__title {
+        color: $text-dark;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        margin-bottom: 2rem;
+        p {
+            font-size: 0.875rem;
+            line-height: 1.4em;
+            color: #3A3330;
+            margin-bottom: 1.46rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        filter: blur(10px);
+        &.lazyloaded {
+            filter: unset;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s6 {
+        padding-top: 9.55rem;
+        padding-bottom: 3.125rem;
+        &__title {
+            margin-bottom: 2.2rem;
+        }
+        &__text {
+            margin-bottom: 2.875rem;
+            p {
+                font-size: 1.375rem;
+                line-height: 1.24em;
+                margin-bottom: 1.1rem;
+            }
+        }
+        &__img {
+        }
+    }   
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s6 {
+        padding-top: 18.75rem;
+        padding-bottom: 6.25rem;
+        &__title {
+            font-size: 2.1875rem;
+            margin-top: 2rem;
+            margin-bottom: 2.25rem;
+            margin-left: 34.5rem;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: -2rem;
+                width: 18.5rem;
+                height: 0.125rem;
+                background: $primary;
+            }
+        }
+        &__text {
+            margin-left: 34.5rem;
+            margin-bottom: 0;
+            p {
+                margin-bottom: 0.9rem;
+            }
+        }
+        &__img {
+            width: 43.8875rem;
+            position: absolute;
+            top: -1.8125rem;
+            left: -13.4375rem;
+        }
+    }   
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s6 {
+        padding-bottom: 9.375rem;
+        &__title {
+            font-size: 3.75rem;
+            margin-top: 2.2rem;
+            margin-bottom: 3.5rem;
+            margin-left: 43.3rem;
+            &::before {
+                top: -1rem;
+            }
+        }
+        &__text {
+            width: 45.75rem;
+            margin-left: 43.3rem;
+            p {
+                margin-bottom: 1.1rem;
+            }
+        }
+        &__img {
+            width: 49.8125rem;
+            top: -1.8125rem;
+            left: -10.2375rem;
+        }
+    }   
+}
+.s7 {
+    padding-top: 2.425rem;
+    padding-bottom: 2.8rem;
+    background: white;
+    color: $text-dark;
+    &__title {
+        margin-bottom: 1.375rem;
+    }
+    &__form {
+        &-options {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            label {
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 1.3rem;
+            }
+            input {
+                display: none;
+                &:checked ~ .box {
+                    background-color: $primary;
+                    border-color: $primary;
+                    background-image: url('/modules/images/icons/ok.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+            .box {
+                width: 1.5625rem;
+                height: 1.5625rem;
+                border-width: 0.0625rem;
+                border-style: solid;
+                border-color: #E3E3E3;
+                margin-right: 1rem;
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+            }
+        }
+        &-submit {
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+        }
+        &-star {
+            font-size: 0.75rem;
+            text-align: center;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s7 {
+        padding-top: 3.625rem;
+        padding-bottom: 6.6875rem;
+        &__title {
+            text-align: center;
+            margin-bottom: 3.775rem;
+        }
+        &__form {
+            &-options {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                height: 5.55rem;
+                margin-bottom: 2.4875rem;
+                margin-left: 2.3rem;
+                label {
+                    width: 12.625rem;
+                    margin-bottom: 0;
+                    &:nth-child(3) {
+                        margin-left: 4rem;
+                    }
+                    &:nth-child(4) {
+                        margin-left: 4rem;
+                    }
+                }
+                input {
+                    &:checked ~ .box {}
+                }
+                .box {
+                    flex-shrink: 0;
+                }
+                p {
+                    font-size: 1.0625rem;
+                    line-height: 1.3125rem;
+                }
+            }
+            &-inputs {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 19.3125rem;
+            }
+            &-submit {
+                margin-top: 2.8rem;
+                margin-bottom: 2.1rem;
+            }
+            &-star {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s7 {
+        padding-top: 5.425rem;
+        padding-bottom: 14rem;
+        &__title {
+            font-size:  2.1875rem;
+            margin-bottom: 3rem;
+        }
+        &__form {
+            &-options {
+                width: 42.25rem;
+                height: 4.3rem;
+                margin-bottom: 5.3875rem;
+                margin-left: 19rem;
+                label {
+                    cursor: pointer;
+                    width: 21.125rem;
+                    margin-bottom: 0;
+                    &:nth-child(3) {
+                        margin-left: 0;
+                    }
+                    &:nth-child(4) {
+                        margin-left: 0;
+                    }
+                }
+                input {
+                    &:checked ~ .box {}
+                }
+                .box {
+                    flex-shrink: 0;
+                }
+                p {
+                    font-size: 1.0625rem;
+                    line-height: 1.3125rem;
+                }
+            }
+            &-inputs {
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 56.075rem;
+                height: 19.3125rem;
+            }
+            &-submit {
+                margin-top: 1.7rem;
+                margin-bottom: 2.1rem;
+            }
+            &-star {}
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s7 {
+        padding-top: 2.5rem;
+        padding-bottom: 12.3rem;
+        &__title {
+            font-size:  3.75rem;
+            margin-bottom: 3.2rem;
+        }
+        &__form {
+            &-options {
+                margin-left: 31.2rem;
+                margin-bottom: 5rem;
+            }
+            &-inputs {
+            }
+            &-submit {
+                margin-top: 0.5rem;
+                margin-bottom: 1.2rem;
+            }
+            &-star {}
+        }
+    }
+}
+.s8 {
+    padding-top: 5.75rem;
+    padding-bottom: 4.125rem;
+    &__loc {
+
+    }
+    &__info {
+        padding-top: 2rem;
+        width: 100%;
+        height: 10.625rem;
+        background: $primary;
+        text-align: center; 
+        &-tel {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        &-adress {
+            font-size: 0.875rem;
+            line-height: 1.0625rem;
+            margin-top: 0.8rem;
+        }
+        &-mail {
+            font-size: 0.875rem;
+        }
+    }
+    &__map {
+        width: 100%;
+        height: 23.9375rem;
+        position: relative;
+        background: white;
+        .ibg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &-pin {
+            position: absolute;
+            top: 9.55rem;
+            left: 1.25rem;
+            width: 2rem;
+        }
+        &-adress {
+            padding: 0.625rem 0 0 1.125rem;
+            width: 13.3125rem;
+            height: 3.6875rem;
+            background: #FFFFFF;
+            box-shadow: 0px 2.84848px 12.8181px rgba(0, 0, 0, 0.25);
+            font-size: 0.75rem;
+            line-height: 1.76em;
+            color: #000000;
+            position: absolute;
+            top: 9.15rem;
+            left: 3.9rem;
+        }
+    }
+    &__logo {
+        position: absolute;
+        bottom: 8.1875rem;
+        left: 1.9375rem;
+        &-img {
+            width: 4.0625rem;
+        }
+    }
+    &__line {
+        position: absolute;
+        bottom: 0.25rem;
+        left: 1.9375rem;
+        height: 8.5rem;
+        width: 0.125rem;
+        background: white;
+    }
+    &__foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7.75rem;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 7.8125rem;
+        svg {
+            width: 1.8125rem;
+        }
+    }
+    &__copy {
+        font-size: 0.5625rem;
+        color: #A1B1C0;
+        margin-top: 1.1875rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s8 {
+        padding-top: 5.875rem;
+        padding-bottom: 6.9375rem;
+        &__loc {}
+        &__info {
+            padding-top: 3.5rem;
+            height: 14.875rem;
+            &-tel {
+                font-size: 1.875rem;
+            }
+            &-adress {
+                font-size: 1rem;
+                line-height: 1.25rem;
+                margin-top: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            &-mail {
+                font-size: 1rem;
+            }
+        }
+        &__map {
+            height: 33.75rem;
+            .ibg {}
+            &-pin {
+                width: 2.75rem;
+                top: 13.4rem;
+                left: 11.8rem;
+            }
+            &-adress {
+                padding: 0.875rem 0 0 1.5625rem;
+                width: 16.3125rem;
+                height: 5.125rem;
+                box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+                font-size: 0.875rem;
+                top: 13rem;
+                left: 15.4rem;
+            }
+        }
+        &__logo {
+            bottom: 0;
+            left: 20.3rem;
+            &-img {
+                width: 5.75rem;
+            }
+        }
+        &__line {
+            bottom: -8rem;
+            left: 20.3rem;
+        }
+        &__foot {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 4.1875rem;
+        }
+        &__icons {
+            width: 10.875rem;
+            margin-top: 0.4rem;
+            margin-right: 2.4rem;
+            svg {
+                width: 2.5rem;
+            }
+        }
+        &__copy {
+            font-size: 0.8125rem;
+            margin-top: 0;
+        }
+        &__circle {
+            position: absolute;
+            top: -3.5rem;
+            right: 0;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s8 {
+        padding-top: 0;
+        padding-bottom: 3.6875rem;
+        &__loc {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: -7.5rem;
+            margin-left: -1.7rem;
+            height: 23.25rem;
+            width: 71.25rem;
+        }
+        &__info {
+            padding-top: 6.5rem;
+            padding-left: 5.6875rem;
+            width: 26.875rem;
+            height: 100%;
+            text-align: left;
+            &-tel {
+                font-size: 1.875rem;
+            }
+            &-adress {
+                margin-top: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            &-mail {
+            }
+        }
+        &__map {
+            width: 44.625rem;
+            height: 100%;
+            .ibg {}
+            &-pin {
+                top: 7.6rem;
+                left: 10.3rem;
+            }
+            &-adress {
+                top: 7.1rem;
+                left: 13.8rem;
+            }
+        }
+        &__logo {
+            bottom: 1.5rem;
+            left: 35.9rem;
+            &-img {
+                width: 5.75rem;
+            }
+        }
+        &__line {
+            height: 4.1875rem;
+            bottom: -1.9rem;
+            left: 35.9rem;
+        }
+        &__foot {
+            align-items: center;
+            margin-top: 4.7875rem;
+        }
+        &__icons {
+            margin-top: 0;
+            margin-right: 1.4rem;
+            svg {}
+        }
+        &__copy {}
+        &__circle {
+            top: 10.8rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .s8 {
+        padding-top: 0;
+        padding-bottom: 8.8125rem;
+        &__loc {
+            margin-top: -3.1rem;
+            margin-left: -10.2rem;
+            height: 23.25rem;
+            width: 103.8125rem;
+        }
+        &__info {
+            width: 40.625rem;
+            &-tel {}
+            &-adress {}
+            &-mail {
+            }
+        }
+        &__map {
+            width: 63.1875rem;
+            .ibg {}
+            &-pin {
+                left: 29rem;
+            }
+            &-adress {
+                left: 32.5rem;
+            }
+        }
+        &__logo {
+            bottom: 0;
+            left: 48.2rem;
+            &-img {}
+        }
+        &__line {
+            bottom: -3.5rem;
+            left: 48.2rem;
+        }
+        &__foot {
+            margin-top: 3.75rem;
+        }
+        &__icons {
+            margin-right: 6.4rem;
+            svg {}
+        }
+        &__copy {
+            margin-left: 5rem;
+        }
+        &__circle {
+            top: 7.9rem;
+        }
+    }
+}

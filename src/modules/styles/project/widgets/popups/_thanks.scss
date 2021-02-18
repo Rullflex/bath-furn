@@ -1,0 +1,23 @@
+#thanks {
+    .popup {
+        &__body {
+            height: 31.125rem;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                height: 28.25rem;
+            }
+        }
+        &__logo {
+
+        }
+        &__circle {
+            width: 7.1875rem;
+            position: absolute;
+            right: 2.0625rem;
+            bottom: 3.125rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                right: 2.75rem;
+                bottom: 1.75rem;
+            }
+        }
+    }
+}

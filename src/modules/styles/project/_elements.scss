@@ -1,0 +1,65 @@
+@import "./elements/buttons";
+@import "./elements/input";
+@import "./elements/slider";
+.container {
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding: 0;
+    }
+}
+
+%headings {
+    font-weight: 600;
+}
+h1 {
+    @extend %headings;
+    line-height: 2.5rem;
+    font-size: 2.0625rem;
+    font-weight: bold;
+    color: #9D7A63;
+}
+
+h2 {
+    @extend %headings;
+    line-height: 1.082em;
+    font-size: 1.25rem;
+}
+h3 {
+    @extend %headings;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3.0625rem;
+    }
+    h2 {
+        font-size: 2.1875rem;
+    }
+    h3 {
+        font-size: 2.1875rem;
+        line-height: 2.6875rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    h1 {}
+    h2 {
+        font-size: 3.125rem;
+    }
+    h3 {}
+}
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    h1 {
+        font-size: 4.375rem;
+        line-height: 5.3125rem;
+    }
+    h2 {
+        font-size: 4.375rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+        line-height: 3.9375rem;
+    }
+}
+
+

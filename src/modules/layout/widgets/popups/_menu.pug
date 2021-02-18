@@ -1,0 +1,17 @@
++popup(id="menu")
+    img.popup__logo(src=`${modulesIco}logo.svg` alt="")
+    .popup__line
+    .popup__hero
+        a.popup__tel.link(href=phoneLink)= phoneNumber
+        nav.popup__nav 
+            a.popup__nav-link.link(href="#s2" data-uk-scroll) Доступные варианты
+            a.popup__nav-link.link(href="#s6" data-uk-scroll) Доставка
+            a.popup__nav-link.link(href="#s7" data-uk-scroll) Для специалистов
+            a.popup__nav-link.link(href="#s8" data-uk-scroll) Контакты
+        .popup__icons
+            a.soc-icon(href=instLink target="_blank")
+                +icon('social-inst') 
+            a.soc-icon(href=ytLink target="_blank")
+                +icon('social-yt') 
+            a.soc-icon(href=fbLink target="_blank")
+                +icon('social-fb') 

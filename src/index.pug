@@ -1,0 +1,190 @@
+extends modules/layout/_layout
+
+prepend head
+	title Мебель для ванной комнаты VIVO MOBILI | Изготавливаем индивидуально по Вашим размерам от 3 недель с гарантией 10 лет
+	meta(name="description", content="Мебель для ванной комнаты VIVO MOBILI | Соберите мебель для своей ванной комнаты. Доставка по всей России")
+
+block content
+	main.main
+		section.s1 
+			.container 
+				h1.s1__title Мебель для ванной комнаты #[span VIVO&nbsp;MOBILI]
+				p.s1__subtitle Изготавливаем индивидуально по&nbsp;Вашим&nbsp;размерам от&nbsp;3&nbsp;недель с&nbsp;гарантией&nbsp;10&nbsp;лет
+				+picture-min(jpg, `${modules}s1-i1`, `${modules}_s1-i1`)(class="s1__img-i1")
+				+picture-min(jpg, `${modules}s1-i2`, `${modules}_s1-i2`)(class="s1__img-i2")
+				img.s1__img-circle.logo-circle(src=`${modulesIco}logo-circle.svg` alt="")
+				.s1__float-line-1
+				.s1__float-line-2
+				.s1__float-line-3
+				.s1__vbu 
+					.s1__vbu-txt Короткое видео о нас
+					a.s1__vbu-play(href="#v" data-uk-toggle) 
+						+icon('play-triangle')
+				.s1__mouse
+					+icon('mouse-scroll')
+					p Скрольте вниз
+				.s1__icons
+					a.soc-icon(href=instLink target="_blank")
+						+icon('social-inst') 
+					a.soc-icon(href=ytLink target="_blank")
+						+icon('social-yt') 
+					a.soc-icon(href=fbLink target="_blank")
+						+icon('social-fb') 
+		section.s2#s2
+			.container 
+				h2.s2__title Доступные варианты
+				img.s2__img-circle.logo-circle(src=`${modulesIco}logo-circle.svg` alt="")
+				.s2__slider(data-uk-slider="")
+					.s2__slider-container.uk-slider-container
+						ul.s2__slider-items.uk-slider-items 
+							li.s2__slider-item.s2__slider-item--1
+								.s2__slider-body
+									.s2__slider-bg.ibg
+										+picture(jpg, `${modules}s2-i1`)
+							li.s2__slider-item.s2__slider-item--2
+								.s2__slider-body
+									.s2__slider-bg.ibg
+										+picture(jpg, `${modules}s2-i2`)
+							li.s2__slider-item.s2__slider-item--3
+								.s2__slider-body
+									.s2__slider-bg.ibg
+										+picture(jpg, `${modules}s2-i3`)
+					+slider-nav()
+		section.s3 
+			.container 
+				.s3__block.s3__block-1
+					.s3__block-head
+						h3.s3__block-title Создаем мебель любого размера под Ваше помещение
+						.s3__block-subtitle Ширина тумбы может быть любой от 600 до 1400 мм
+					+picture-min(png, `${modules}s3-i1`, `${modules}_s3-i1`)(class="s3__block-img")
+					.s3__block-line 
+				.s3__block.s3__block-2
+					.s3__block-head
+						h3.s3__block-title Срок изготовления: 
+						.s3__block-subtitle 
+							p 4 недели - с фасадами из Fenix NTM / Ламината / Шпона
+							p 6 недель - с фасадами из МДФ
+						picture
+							source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset=`${modulesIco}set-xl.svg`)
+							source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset=`${modulesIco}set-lg.svg`)
+							source(media=`(min-width: ${md}px)` srcset=ipl data-srcset=`${modulesIco}set-md.svg`)
+							source(media=`(min-width: 0px)` srcset=ipl data-srcset=`${modulesIco}set-sm.svg`)
+							img.lazyload.s3__block-set(src=ipl data-src=`${modulesIco}set-lg.svg` alt='')
+					+picture-min(jpg, `${modules}s3-i2`, `${modules}_s3-i2`)(class="s3__block-img")
+					.s3__block-line 
+				.s3__block.s3__block-3
+					.s3__block-head
+						h3.s3__block-title Палитра цветов#[br] на любой вкус 
+						.s3__block-subtitle 
+							p 24 цвета корпуса
+							p 300 цветов фасадов
+							p Более 7 тысяч вариантов оформления
+					+picture-min(jpg, `${modules}s3-i3`, `${modules}_s3-i3`)(class="s3__block-img")
+					.s3__block-line 
+				.s3__block.s3__block-4
+					.s3__block-head
+						h3.s3__block-title Прочность#[br] и надежность: 
+						.s3__block-subtitle 
+							p Тумба в консольном исполнении выдерживает 100кг нагрузки
+							p Корпус FENIX не боится царапин и химии
+							p Гарантия на фурнитуру - 30 лет
+							p Гарантия на мебель - 10 лет
+					+picture-min(jpg, `${modules}s3-i4`, `${modules}_s3-i4`)(class="s3__block-img")
+					.s3__block-line 
+		section.s4 
+			.container 
+				h2.s4__title Готовые решения
+				.s4__slider(data-uk-slider="")
+					.s4__slider-container.uk-slider-container
+						ul.s4__slider-items.uk-slider-items 
+							- for(var i=1; i <= 6; i++)
+								li.s4__slider-item
+									.s4__slider-body
+										.s4__slider-bg.ibg
+											+picture(jpg, `${modules}s4-i${i}`)
+					.slidenav
+						a.slidenav-btn.slidenav-prev(href="#" data-uk-slider-item="previous")
+							+icon('arrow-left', primary)
+						p Еще варианты
+						a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
+							+icon('arrow-right', primary)
+		section.s5 
+			.container 
+				h2.s5__title Соберите мебель для#[br.d-md-none] своей#[br.d-none.d-md-inline] ванной команты
+				+picture(jpg, `${modules}s5-i`, 'sml')( class="s5__img-bg")
+				p.s5__descr Получите скидку на&nbsp;крепежные#[br] элементы и раковины
+				p.s5__prep до
+				+icon('minus50', primary)(class="s5__svg")
+				a.uk-button.btn-solid-primary.s5__btn(href="#") Подобрать
+		section.s6#s6
+			.container 
+				h2.s6__title Доставка
+				.s6__text 
+					p Мы отправляем по всей территории РФ
+					p Срок доставки не превышает 4 недель* 
+					p Мы тщательно упаковываем каждый заказ так, чтобы исключить любые неприятности при перевозке
+					p Мы страхуем каждую отправку, если все-таки при перевозке #[br]содержимое посылки будет повреждено - мы незамедлительно выплатим вам всю стоимость,#[br] а хлопоты по страховке возьмем на себя.
+					p Мы тщательно упаковываем каждый заказ так, чтобы исключить любые неприятности при перевозке
+				+picture-min(jpg, `${modules}s6-i`, `${modules}_s6-i`)(class="s6__img")
+		section.s7#s7
+			.container
+				h2.s7__title Для специалистов
+				form.s7__form(action="#") 
+					.s7__form-options 
+						label
+							input(type="checkbox" name="Дизайнер" checked)
+							.box
+							p Дизайнер
+						label 
+							input(type="checkbox" name="Монтажник / Установщик")
+							.box
+							p Монтажник / Установщик
+						label 
+							input(type="checkbox" name="3D модели" checked)
+							.box
+							p 3D модели
+						label 
+							input(type="checkbox" name="PDF-инструкции по монтажу") 
+							.box
+							p PDF-инструкции#[br.d-lg-none] по монтажу
+					.s7__form-inputs
+						.input-wrap 
+							input.input(type="text" name="Имя" placeholder="Имя и Фамилия*")
+						.input-wrap 
+							input.input.phone(type="tel" name="Телефон" placeholder="Номер телефона*")
+						.input-wrap 
+							input.input(type="text" name="Организация" placeholder="Организация")
+						.input-wrap 
+							input.input(type="text" name="Город" placeholder="Город")
+						.input-wrap 
+							input.input(type="text" name="Сайт" placeholder="Сайт")
+						.input-wrap 
+							input.input(type="text" name="Instagram" placeholder="Instagram")
+					button.s7__form-submit.uk-button.btn-solid-submit(type="submit") Отправить заявку
+					p.s7__form-star * -обязательно для заполнения
+		section.s8#s8
+			.container
+				.s8__loc 
+					.s8__info
+						a.s8__info-tel.link(href=phoneLink)= phoneNumber
+						p.s8__info-adress Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
+						a.s8__info-mail.link(href=`mailto:${mailAdress}`)= mailAdress
+					.s8__map
+						.ibg 
+							+picture(jpg, `${modules}s7-i`, 'smlx')
+						+icon('pin', '#9D7A63')(class="s8__map-pin")
+						.s8__map-adress 
+							p Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
+				a.s8__logo(href="/")
+					img.s8__logo-img(src=`${modulesIco}logo.svg` alt="")
+				.s8__line
+				.s8__foot
+					.s8__icons
+						a.soc-icon(href=instLink target="_blank")
+							+icon('social-inst') 
+						a.soc-icon(href=ytLink target="_blank")
+							+icon('social-yt') 
+						a.soc-icon(href=fbLink target="_blank")
+							+icon('social-fb') 
+					p.s8__copy VIVOMOBILI© Copyright 2020
+				img.s8__circle.logo-circle.d-none.d-md-block(src=`${modulesIco}logo-circle.svg` alt="")

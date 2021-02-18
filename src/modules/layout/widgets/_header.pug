@@ -1,0 +1,11 @@
+header.header 
+    .container.header__row
+        a.header__burger(href="#menu" data-uk-toggle) #[i]#[i]#[i]
+        a.header__logo(href="/")
+            img.header__logo-img(src=`${modulesIco}logo.svg` alt="")
+        nav.header__nav 
+            a.header__nav-link.link(href="#s2" data-uk-scroll) Доступные варианты
+            a.header__nav-link.link(href="#s6" data-uk-scroll) Доставка
+            a.header__nav-link.link(href="#s7" data-uk-scroll) Для специалистов
+            a.header__nav-link.link(href="#s8" data-uk-scroll) Контакты
+        a.header__tel.link(href=phoneLink)= phoneNumber

@@ -1,0 +1,134 @@
+//- popup
+mixin popup()
+	.popup.uk-flex-top(data-uk-modal="animation: fade")&attributes(attributes)
+		.popup__body.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical.uk-animation-fade
+			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
+			block
+
+//- Slider dots and navigation
+
+mixin slider-dots()
+	ul.uk-slider-nav.uk-dotnav.slidedots&attributes(attributes)
+mixin slideshow-dots()
+	ul.uk-slideshow-nav.uk-dotnav.slidedots&attributes(attributes)
+
+mixin slider-nav()
+	.slidenav&attributes(attributes)
+		a.slidenav-btn.slidenav-prev(href="#" data-uk-slider-item="previous")
+			+icon('arrow-left')
+		p Еще варианты
+		a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
+			+icon('arrow-right')
+
+mixin slideshow-nav()
+	a.slidenav.slidenav-prev(href="#" data-uk-slideshow-item="previous")&attributes(attributes)
+		+icon('arrow-left')
+	a.slidenav.slidenav-next(href="#" data-uk-slideshow-item="next")&attributes(attributes)
+		+icon('arrow-right')
+
+
+
+//- iconset
+
+mixin icon(icon, filler = 'white')
+	case icon
+		when 'minus50'
+			svg(width="394" height="101" viewBox="0 0 394 101" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M0.706055 51.2248H78.1524V68.5329H0.706055V51.2248Z" fill=filler)
+				path(d="M134.58 38.3475C148.853 38.3475 159.365 41.0706 166.116 46.5169C172.963 51.9632 176.386 59.2557 176.386 68.3944C176.386 74.3023 174.843 79.7025 171.757 84.5949C168.671 89.395 163.946 93.272 157.581 96.226C151.312 99.0876 143.549 100.518 134.291 100.518C127.154 100.518 120.114 99.6415 113.171 97.8876C106.323 96.0414 100.489 93.4567 95.6669 90.1335L104.925 72.9638C108.783 75.7331 113.219 77.9024 118.234 79.4717C123.248 80.9486 128.408 81.6871 133.712 81.6871C139.595 81.6871 144.224 80.5794 147.599 78.364C150.975 76.1485 152.662 73.0561 152.662 69.0868C152.662 64.9328 150.878 61.7943 147.31 59.6711C143.838 57.548 137.763 56.4864 129.083 56.4864H103.189L108.397 1.93111H170.166V19.9316H127.926L126.335 38.3475H134.58Z" fill=filler)
+				path(d="M221.335 100.518C212.945 100.518 205.471 98.5337 198.913 94.5644C192.356 90.5951 187.196 84.8718 183.435 77.3947C179.77 69.8253 177.938 60.825 177.938 50.394C177.938 39.9629 179.77 31.0088 183.435 23.5317C187.196 15.9623 192.356 10.1929 198.913 6.22354C205.471 2.2542 212.945 0.269531 221.335 0.269531C229.726 0.269531 237.2 2.2542 243.757 6.22354C250.315 10.1929 255.427 15.9623 259.091 23.5317C262.852 31.0088 264.733 39.9629 264.733 50.394C264.733 60.825 262.852 69.8253 259.091 77.3947C255.427 84.8718 250.315 90.5951 243.757 94.5644C237.2 98.5337 229.726 100.518 221.335 100.518ZM221.335 81.5487C227.507 81.5487 232.329 79.0101 235.801 73.9331C239.369 68.856 241.154 61.0096 241.154 50.394C241.154 39.7783 239.369 31.9319 235.801 26.8549C232.329 21.7778 227.507 19.2393 221.335 19.2393C215.26 19.2393 210.438 21.7778 206.87 26.8549C203.398 31.9319 201.662 39.7783 201.662 50.394C201.662 61.0096 203.398 68.856 206.87 73.9331C210.438 79.0101 215.26 81.5487 221.335 81.5487Z" fill=filler)
+				path(d="M299.554 54.271C292.128 54.271 286.052 51.8709 281.327 47.0708C276.698 42.1784 274.383 35.6705 274.383 27.5472C274.383 19.4239 276.698 12.9622 281.327 8.16205C286.052 3.26961 292.128 0.823394 299.554 0.823394C306.98 0.823394 313.007 3.26961 317.636 8.16205C322.265 12.9622 324.58 19.4239 324.58 27.5472C324.58 35.6705 322.265 42.1784 317.636 47.0708C313.007 51.8709 306.98 54.271 299.554 54.271ZM359.876 1.93111H377.091L307.944 98.8568H290.73L359.876 1.93111ZM299.554 42.9168C302.833 42.9168 305.388 41.6245 307.221 39.0398C309.149 36.4551 310.114 32.6243 310.114 27.5472C310.114 22.4701 309.149 18.6393 307.221 16.0546C305.388 13.4699 302.833 12.1775 299.554 12.1775C296.371 12.1775 293.816 13.516 291.887 16.193C289.958 18.7777 288.994 22.5624 288.994 27.5472C288.994 32.5319 289.958 36.3628 291.887 39.0398C293.816 41.6245 296.371 42.9168 299.554 42.9168ZM368.267 99.9645C363.445 99.9645 359.105 98.903 355.247 96.7798C351.486 94.5644 348.545 91.4258 346.423 87.3642C344.301 83.3026 343.241 78.5947 343.241 73.2407C343.241 67.8867 344.301 63.1789 346.423 59.1173C348.545 55.0556 351.486 51.9632 355.247 49.8401C359.105 47.6247 363.445 46.5169 368.267 46.5169C375.692 46.5169 381.72 48.9632 386.349 53.8556C391.074 58.6557 393.437 65.1174 393.437 73.2407C393.437 81.364 391.074 87.8719 386.349 92.7643C381.72 97.5645 375.692 99.9645 368.267 99.9645ZM368.267 88.6104C371.546 88.6104 374.101 87.318 375.934 84.7334C377.862 82.0564 378.827 78.2255 378.827 73.2407C378.827 68.256 377.862 64.4713 375.934 61.8866C374.101 59.2096 371.546 57.8711 368.267 57.8711C365.084 57.8711 362.529 59.1634 360.6 61.7481C358.671 64.3328 357.707 68.1637 357.707 73.2407C357.707 78.3178 358.671 82.1487 360.6 84.7334C362.529 87.318 365.084 88.6104 368.267 88.6104Z" fill=filler)
+		when 'arrow-left'
+			svg(width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M0.685497 8.60908C0.294975 8.21856 0.294975 7.58539 0.685497 7.19487L7.04946 0.830907C7.43998 0.440382 8.07315 0.440382 8.46367 0.830907C8.8542 1.22143 8.8542 1.8546 8.46367 2.24512L2.80682 7.90197L8.46367 13.5588C8.8542 13.9494 8.8542 14.5825 8.46367 14.973C8.07315 15.3636 7.43998 15.3636 7.04946 14.973L0.685497 8.60908ZM40.9661 8.90198L1.3926 8.90197L1.3926 6.90197L40.9661 6.90198L40.9661 8.90198Z" fill=filler)
+		when 'arrow-right'
+			svg(width="58" height="16" viewBox="0 0 58 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M57.5824 8.60909C57.9729 8.21857 57.9729 7.5854 57.5824 7.19488L51.2185 0.830914C50.8279 0.44039 50.1948 0.44039 49.8042 0.830914C49.4137 1.22144 49.4137 1.8546 49.8042 2.24513L55.4611 7.90198L49.8042 13.5588C49.4137 13.9494 49.4137 14.5825 49.8042 14.973C50.1948 15.3636 50.8279 15.3636 51.2185 14.973L57.5824 8.60909ZM0.926147 8.90198L56.8753 8.90198L56.8753 6.90198L0.926148 6.90198L0.926147 8.90198Z" fill=filler)
+		when 'pin'
+			svg(width="45" height="60" viewBox="0 0 45 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M22.4609 0.566406C10.3347 0.566406 0.462891 10.1015 0.462891 21.814C0.462891 36.3573 20.1472 57.708 20.9897 58.6019C21.7728 59.45 23.1491 59.45 23.9322 58.6019C24.7746 57.6965 44.459 36.3573 44.459 21.814C44.4708 10.1015 34.599 0.566406 22.4609 0.566406ZM22.4609 32.5066C16.3622 32.5066 11.3907 27.7046 11.3907 21.814C11.3907 15.9233 16.3622 11.1214 22.4609 11.1214C28.5596 11.1214 33.5311 15.9233 33.5311 21.814C33.5311 27.7046 28.5715 32.5066 22.4609 32.5066Z" fill=filler)
+		when 'social-fb'
+			svg(width="41" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M17.4661 17.7463H14.6761V21.4662H17.4661V32.6469H22.137V21.4873H25.5399L25.878 17.7674H22.1582V16.2034C22.1582 15.3157 22.3273 14.9564 23.1938 14.9564H25.878V10.2854H22.3273C18.9667 10.2854 17.4872 11.7649 17.4872 14.5971L17.4661 17.7463Z" fill=filler)
+				path.animate(d="M20.9899 40.9799C9.94979 40.9799 1 32.0301 1 20.9899C1 9.94979 9.94979 1 20.9899 1" stroke=filler stroke-width="2")
+				circle.circle(cx="20.9844" cy="21.4662" r="19.7399" stroke="#8B6D60" stroke-width="0.5")
+		when 'social-inst'
+			svg(width="41" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path.animate(d="M20.9899 40.9799C9.94979 40.9799 1 32.0301 1 20.9899C1 9.94979 9.94979 1 20.9899 1" stroke=filler stroke-width="2")
+				circle.circle(cx="20.9844" cy="21.1511" r="19.7399" stroke="#8B6D60" stroke-width="0.5")
+				path(d="M20.9254 16.9931C18.5221 16.9931 16.5594 18.9458 16.5594 21.3591C16.5594 23.7624 18.5121 25.7251 20.9254 25.7251C23.3387 25.7251 25.2813 23.7624 25.2813 21.3591C25.2813 18.9558 23.3287 16.9931 20.9254 16.9931ZM20.9254 24.223C19.3532 24.223 18.0614 22.9413 18.0614 21.3591C18.0614 19.7769 19.3432 18.4952 20.9254 18.4952C22.5075 18.4952 23.7793 19.7869 23.7793 21.3591C23.7793 22.9413 22.4975 24.223 20.9254 24.223Z" fill=filler)
+				path(d="M25.4719 15.7214C25.1815 15.7214 24.9011 15.8415 24.6909 16.0418C24.4806 16.2421 24.3704 16.5325 24.3704 16.8229C24.3704 17.1133 24.4906 17.3937 24.6909 17.604C24.8911 17.8042 25.1815 17.9244 25.4719 17.9244C25.7623 17.9244 26.0427 17.8042 26.253 17.604C26.4633 17.3937 26.5734 17.1133 26.5734 16.8229C26.5734 16.5325 26.4533 16.2521 26.253 16.0418C26.0427 15.8415 25.7623 15.7214 25.4719 15.7214Z" fill=filler)
+				rect(x="12.0383" y="12.0008" width="17.8913" height="18.3004" rx="4.04133" stroke=filler stroke-width="1.15466")
+		when 'social-yt'
+			svg(width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M28.8537 14.1209C25.5988 13.8884 18.3492 13.8884 15.0943 14.1209C11.5647 14.3534 11.1631 16.0865 11.142 21.7086C11.1631 27.3096 11.5858 29.0427 15.0943 29.2963C18.3492 29.5288 25.5988 29.5288 28.8537 29.2963C32.3833 29.0638 32.7849 27.3307 32.8272 21.7086C32.7849 16.0865 32.3833 14.3534 28.8537 14.1209ZM18.8776 25.3228V18.0733L26.4865 21.6875L18.8776 25.3228Z" fill=filler)
+				circle.circle(cx="21.9844" cy="21.7087" r="19.7399" stroke="#8B6D60" stroke-width="0.5")
+				path.animate(d="M21.9844 41.6986C10.9443 41.6986 1.99451 32.7488 1.99451 21.7087C1.99451 10.6685 10.9443 1.71875 21.9844 1.71875" stroke=filler stroke-width="2")
+		when 'play-triangle'
+			svg(width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M33.0043 18.2801C33.9173 18.8072 33.9173 20.125 33.0043 20.6521L2.98124 37.986C2.06822 38.5131 0.926962 37.8542 0.926962 36.7999L0.926964 2.13225C0.926964 1.078 2.06823 0.419092 2.98124 0.946219L33.0043 18.2801Z" fill=filler)
+		when 'mouse-scroll'
+			svg(width="37" height="165" viewBox="0 0 37 165" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				line(x1="18.3003" y1="0.474976" x2="18.3003" y2="59.6957" stroke=filler stroke-width="2")
+				line(x1="18.3003" y1="120.081" x2="18.3003" y2="164.124" stroke=filler stroke-width="2")
+				line(x1="18.3003" y1="69.4779" x2="18.3003" y2="75.4897" stroke=filler stroke-width="2" stroke-linecap="round")
+				rect(x="1.07275" y="60.6957" width="34.553" height="58.3859" rx="17.2765" stroke=filler stroke-width="2")
+		
+
+//- type: `jpg`/ `png` or jpg/ png if so-called var inited
+//- src: `${path}/to/img`  - without prefixes and dimensions
+//- dimentions: `s`/ `sml`/ `sl`/ `smlx`/ `sx`....
+//- retina: true/ false
+
+//- Атрибуты типа class, alt записываются как обычно в скобках сразу за миксином  -- +picture(jpg, 'tmp')(class="pic" alt="lev")
+
+//- image nameing: anyname-sm.jpg
+
+- var jpg = `jpg`, png = `png`
+
+- var globalRetinaUsage = `` //- `` -if false
+- var globalDimentionsUsage = `sm`
+
+- var postfixRetina = '@2x'
+- var postfix = { sm: `-sm`, md: `-md`, lg: `-lg`, xl: `-xl` } //- `smlx`
+
+mixin picture(type, src, dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
+	picture
+		if dimentions.includes(`n`)
+			source(srcset=ipl data-srcset=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x,` : ``} ${src}.webp 1x` type=`image/webp`)
+			source(srcset=ipl data-srcset=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x,` : ``} ${src}.${type} 1x` type=`image/${type}`)
+			img.lazyload(src=ipl data-src=`${src}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`x`)
+				source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x,` : ``} ${src + postfix.xl}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x,` : ``} ${src + postfix.xl}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x,` : ``} ${src + postfix.lg}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x,` : ``} ${src + postfix.lg}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`m`)
+				source(media=`(min-width: ${md}px)` srcset=ipl data-srcset=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x,` : ``} ${src + postfix.md}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${md}px)` srcset=ipl data-srcset=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x,` : ``} ${src + postfix.md}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`s`)
+				source(media=`(min-width: 0px)` srcset=ipl data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: 0px)` srcset=ipl data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type} 1x` type=`image/${type}`)
+			img.lazyload(src=ipl data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+mixin picture-min(type, src, minSrc,  dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
+	picture
+		if dimentions.includes(`n`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x,` : ``} ${src}.webp 1x` type=`image/webp`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x,` : ``} ${src}.${type} 1x` type=`image/${type}`)
+			img.lazyload(src=`${minSrc}-min.${type}` data-src=`${src}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`x`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x,` : ``} ${src + postfix.xl}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x,` : ``} ${src + postfix.xl}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x,` : ``} ${src + postfix.lg}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x,` : ``} ${src + postfix.lg}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`m`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x,` : ``} ${src + postfix.md}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x,` : ``} ${src + postfix.md}.${type} 1x` type=`image/${type}`)
+			if dimentions.includes(`s`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp 1x` type=`image/webp`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type} 1x` type=`image/${type}`)
+			img.lazyload(src=`${minSrc + postfix.lg}-min.${type}` data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)

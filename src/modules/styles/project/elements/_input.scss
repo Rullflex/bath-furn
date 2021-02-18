@@ -1,0 +1,44 @@
+.input {
+    //specified
+    padding-left: 1.75rem;
+    height: 3.75rem;
+    width: 100%;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+
+    //common
+    $self: &;
+    display: block;
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: #E3E3E3;
+    transition: $transition--normal;
+    color: $text-dark;
+    &:focus {
+        border-color: $text-dark;
+    }
+    &-wrap {
+        &.has-error {
+            #{$self} {
+                border-color: $danger !important;
+                color: $danger;
+            }
+        }
+        &.has-success {
+            // #{$self} {
+            //     border-color: $success !important;
+            //     color: $success;
+            // }
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding-left: 2.375rem;
+        height: 4.375rem;
+        width: 21.25rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        width: 26.125rem;
+    }
+}

@@ -1,0 +1,70 @@
+#menu {
+    .popup {
+        &__body {
+            padding-bottom: 0;
+            height: 22.25rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                height: 31.125rem;
+            }
+        }
+        &__line {
+            position: absolute;
+            height: 17.375rem;
+            width: 0.125rem;
+            background: white;
+            bottom: 0;
+            left: 1.75rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                height: 25rem;
+                left: 2.1875rem;
+            }
+        }
+        &__hero {
+            margin-top: 2.3125rem;
+            margin-left: 2.125rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                margin-left: 2.6875rem;
+                margin-top: 3.75rem;
+            }
+        }
+        &__tel {
+            font-size: 1.125rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                font-size: 1.375rem;
+            }
+        }
+        &__nav {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                margin-top: 1.5rem;
+                margin-bottom: 3rem;
+            }
+            &-link {
+                margin-bottom: 0.35rem;
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        &__icons {
+            display: flex;
+            justify-content: space-between;
+            width: 10.9375rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 13.6875rem;
+            }
+            svg {
+                width: 2.5rem;
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    width: 3.125rem;
+                }
+                .circle {
+                    stroke: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.uk-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    cursor: pointer;
+    
+    transition: $transition--hover;
+
+    text-align: center;
+}
+
+.btn {
+    &-solid {
+        @mixin btn-solid($btn-color, $font-color) {
+            background: $btn-color;
+            color: $font-color;
+            &:active {
+                background: link-hover($btn-color);
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: link-hover($btn-color);
+                }
+            }
+        }
+        &-primary {
+            @include btn-solid($primary, $text-light);
+            //specified
+            width: 100%;
+            line-height: 3.75rem;
+            font-size: 1.125rem;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 15.625rem;
+                line-height: 4.25rem;
+                font-size: 1.25rem;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 17.1875rem;
+                line-height: 4.6875rem;
+                font-size: 1.375rem;
+            }
+        }
+        &-submit {
+            @include btn-solid($primary, $text-light);
+            //specified
+            width: 100%;
+            line-height: 3.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 29.875rem;
+                line-height: 5.375rem;
+                font-size: 1.3125rem;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 29.875rem;
+                line-height: 5.375rem;
+            }
+        }
+    }
+}
