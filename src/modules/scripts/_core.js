@@ -58,6 +58,30 @@ class App {
         handleBreakpointCross(mediaQuery)
     }
 
+    // меняют класс акстивности в сетах
+    changeActivitySet(set, index, activeClass = `active`) {
+        set.forEach(e => e.classList.remove(activeClass))
+        set[index].classList.add(activeClass)
+    }
+    changeActivityElement(el, activeClass = `active`) {
+        el.parentElement.childNodes.forEach(e => e.classList.remove(activeClass))
+        el.parentElement.children[this.showIndex(el, el.parentElement.children)].classList.add(activeClass)
+    }
+
+    // возвр. индекс элемента в сете
+    indexOfElements(el, set) {
+        return [...set].indexOf(el)
+    }
+    
+    // при любом изменении слайда возвращает его индекс в CB функцию
+    sliderSpy(slider, callback = (index) => {}) {
+        document.querySelectorAll(`${slider} .uk-slider-items > li`).forEach((el, idx) => {
+            el.addEventListener(`beforeitemshow`, (event) => {
+                const target = event.target
+                callback([...target.parentElement.children].indexOf(target))
+            })
+        })
+    }
 }
 
 class Quiz extends App {
