@@ -18,7 +18,7 @@ block content
 				.s1__float-line-3
 				.s1__vbu 
 					.s1__vbu-txt Короткое видео о нас
-					a.s1__vbu-play(href="#v" data-uk-toggle) 
+					a.s1__vbu-play(href="#video" data-uk-toggle) 
 						+icon('play-triangle')
 				.s1__mouse
 					+icon('mouse-scroll')
@@ -49,7 +49,12 @@ block content
 								.s2__slider-body
 									.s2__slider-bg.ibg
 										+picture(jpg, `${modules}s2-i3`)
-					+slider-nav()
+					.s2__slider-nav
+						.s2__slidegal.slidegal.slidegal--dark
+							- for(var i = 1; i <= 3; i++)
+								.slidegal-item.ibg(class=`${i == 1 ? 'active' : ''}`)
+									+picture(jpg, `${modules}s2-i${i}`)
+						+slider-nav()
 		section.s3 
 			.container 
 				.s3__block.s3__block-1
@@ -102,12 +107,17 @@ block content
 									.s4__slider-body
 										.s4__slider-bg.ibg
 											+picture(jpg, `${modules}s4-i${i}`)
-					.slidenav
-						a.slidenav-btn.slidenav-prev(href="#" data-uk-slider-item="previous")
-							+icon('arrow-left', primary)
-						p Еще варианты
-						a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
-							+icon('arrow-right', primary)
+					.s4__slider-nav
+						.slidegal.slidegal--light
+							- for(var i = 1; i <= 6; i++)
+								.slidegal-item.ibg(class=`${i == 1 ? 'active' : ''}`)
+									+picture(jpg, `${modules}s4-i${i}`)
+						.slidenav
+							a.slidenav-btn.slidenav-prev(href="#" data-uk-slider-item="previous")
+								+icon('arrow-left', primary)
+							p Еще варианты
+							a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
+								+icon('arrow-right', primary)
 		section.s5 
 			.container 
 				h2.s5__title Соберите мебель для#[br.d-md-none] своей#[br.d-none.d-md-inline] ванной команты

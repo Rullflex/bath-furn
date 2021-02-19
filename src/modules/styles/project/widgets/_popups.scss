@@ -1,2 +1,18 @@
 @import 'popups/menu';
-@import 'popups/thanks'
+@import 'popups/thanks';
+#video {
+    .popup {
+        &__body {
+            padding: 0;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 45rem;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 70rem;
+            }
+            iframe {
+                margin-bottom: -0.5rem;
+            }
+        }
+    }
+}
