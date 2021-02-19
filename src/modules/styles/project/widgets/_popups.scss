@@ -10,9 +10,6 @@
             @media (min-width: map-get($grid-breakpoints, lg)) {
                 width: 70rem;
             }
-            iframe {
-                margin-bottom: -0.5rem;
-            }
         }
     }
 }

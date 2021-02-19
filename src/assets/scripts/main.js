@@ -25,4 +25,9 @@ document.addEventListener(`DOMContentLoaded`, function () {
     
     slidegal(2)
     slidegal(4)
+
+    UIkit.scrollspy(`#video`)
+    document.querySelector(`#video`).addEventListener(`inview`, (event) => {
+        document.querySelector(`#video .popup__body`).insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
+    })
 })
