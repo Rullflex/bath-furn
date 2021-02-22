@@ -107,7 +107,10 @@ mixin picture(type, src, dimentions = globalDimentionsUsage, retina = globalReti
 			if dimentions.includes(`s`)
 				source(media=`(min-width: 0px)` srcset=ipl data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp 1x` type=`image/webp`)
 				source(media=`(min-width: 0px)` srcset=ipl data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type} 1x` type=`image/${type}`)
-			img.lazyload(src=ipl data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			if dimentions.includes(`l`)
+				img.lazyload(src=ipl data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			else
+				img.lazyload(src=ipl data-src=`${src + postfix.md}.${type}` alt='')&attributes(attributes)
 mixin picture-min(type, src, minSrc,  dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
 	picture
 		if dimentions.includes(`n`)
@@ -127,4 +130,7 @@ mixin picture-min(type, src, minSrc,  dimentions = globalDimentionsUsage, retina
 			if dimentions.includes(`s`)
 				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp 1x` type=`image/webp`)
 				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type} 1x` type=`image/${type}`)
-			img.lazyload(src=`${minSrc + postfix.lg}-min.${type}` data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			if dimentions.includes(`l`)
+				img.lazyload(src=`${minSrc + postfix.lg}-min.${type}` data-src=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			else
+				img.lazyload(src=`${minSrc + postfix.md}-min.${type}` data-src=`${src + postfix.md}.${type}` alt='')&attributes(attributes)

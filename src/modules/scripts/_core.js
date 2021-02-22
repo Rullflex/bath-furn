@@ -213,7 +213,7 @@ class Form extends App {
         this.formInput = `.input-wrap`
         this.disableIMask = false,
         this.disableMessages = true,
-        this. removeErrorOnFocus = true,
+        this.removeErrorOnFocus = true,
         this.constraints = {
             email: {
               // Email is required
@@ -366,7 +366,7 @@ class Form extends App {
         // We loop through all the inputs and show the errors for that input
           // Since the errors can be null if no errors were found we need to handle
           // that
-        form.querySelectorAll("input[name], select[name]").forEach(input => this.showErrorsForInput(input, errors && errors[input.name]))
+        form.querySelectorAll(`input.input:not([type="hidden"])`).forEach(input => this.showErrorsForInput(input, errors && errors[input.name]))
     }
 
       // Shows the errors for a specific input
@@ -412,19 +412,14 @@ class Form extends App {
         block.classList.add("error");
         block.innerText = error;
         if (!this.disableMessages && messages != null) {
-            messages.appendChild(block);
+            messages.appendChild(block)
         }
-        
     }
 
     showSuccess(form) {
         const formData = new FormData(form)
         
-        // if (form.classList.contains(`form-quiz`)) {
-        //     ym(71270149,'reachGoal','quiz')
-        // } else {
-        //     ym(71270149,'reachGoal','form')
-        // }
+        ym(72788506,'reachGoal','form')
         UIkit.modal(`#thanks`).show();
 
         fetch(`${this._apiBase}mail.php`, {
@@ -443,7 +438,7 @@ class Form extends App {
 
     formConstraints(form) {
         let localConstraints = {}
-        form.querySelectorAll(`input[name], select[name]`).forEach(e => {
+        form.querySelectorAll(`input.input:not([type="hidden"])`).forEach(e => {
             if (this.constraints[e.name] != undefined) {
                 localConstraints[e.name] = this.constraints[e.name]
             }

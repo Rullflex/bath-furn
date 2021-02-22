@@ -3,6 +3,7 @@ extends modules/layout/_layout
 prepend head
 	title Мебель для ванной комнаты VIVO MOBILI | Изготавливаем индивидуально по Вашим размерам от 3 недель с гарантией 10 лет
 	meta(name="description", content="Мебель для ванной комнаты VIVO MOBILI | Соберите мебель для своей ванной комнаты. Доставка по всей России")
+	meta(name="yandex-verification" content="d42ec40d882eb8b1")
 
 block content
 	main.main
@@ -26,7 +27,7 @@ block content
 				.s1__icons
 					a.soc-icon(href=instLink target="_blank")
 						+icon('social-inst') 
-					a.soc-icon(href=ytLink target="_blank")
+					a.d-none.soc-icon(href=ytLink target="_blank")
 						+icon('social-yt') 
 					a.soc-icon(href=fbLink target="_blank")
 						+icon('social-fb') 
@@ -34,27 +35,18 @@ block content
 			.container 
 				h2.s2__title Доступные варианты
 				img.s2__img-circle.logo-circle(src=`${modulesIco}logo-circle.svg` alt="")
-				.s2__slider(data-uk-slider="")
-					.s2__slider-container.uk-slider-container
-						ul.s2__slider-items.uk-slider-items 
-							li.s2__slider-item.s2__slider-item--1
-								.s2__slider-body
-									.s2__slider-bg.ibg
-										+picture(jpg, `${modules}s2-i1`)
-							li.s2__slider-item.s2__slider-item--2
-								.s2__slider-body
-									.s2__slider-bg.ibg
-										+picture(jpg, `${modules}s2-i2`)
-							li.s2__slider-item.s2__slider-item--3
-								.s2__slider-body
-									.s2__slider-bg.ibg
-										+picture(jpg, `${modules}s2-i3`)
-					.s2__slider-nav
-						.s2__slidegal.slidegal.slidegal--dark
-							- for(var i = 1; i <= 3; i++)
-								.slidegal-item.ibg(class=`${i == 1 ? 'active' : ''}`)
-									+picture(jpg, `${modules}s2-i${i}`)
-						+slider-nav()
+				.s2__blocks
+					.s2__block.s2__block--1
+						.s2__block-bg.ibg
+							+picture-min(jpg, `${modules}s2-i1`, `${modules}s2-i1`)
+						.s2__descr Корпус мебели
+						a.s2__btn.uk-button.btn-solid-brown(href="#body" data-uk-toggle="") Подробнее
+					.s2__block.s2__block--2
+						.s2__block-bg.ibg
+							+picture-min(jpg, `${modules}s2-i2`, `${modules}s2-i2`)
+						.s2__descr Фасады
+						a.s2__btn.uk-button.btn-solid-brown(href="#facade" data-uk-toggle="") Подробнее
+					
 		section.s3 
 			.container 
 				.s3__block.s3__block-1
@@ -192,7 +184,7 @@ block content
 					.s8__icons
 						a.soc-icon(href=instLink target="_blank")
 							+icon('social-inst') 
-						a.soc-icon(href=ytLink target="_blank")
+						a.d-none.soc-icon(href=ytLink target="_blank")
 							+icon('social-yt') 
 						a.soc-icon(href=fbLink target="_blank")
 							+icon('social-fb') 

@@ -13,3 +13,94 @@
         }
     }
 }
+#facade, #body {
+    .popup {
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            &__close {
+                color: #434343;
+            }
+        }
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &__close {
+                &:hover {
+                    color: rgba(#434343, 0.8);
+                }
+            }
+        }
+        &__body {
+            padding: 0;
+            background: white;
+            color: #000000;
+
+            img {
+                width: 100%;
+                filter: blur(10px);
+                border: 0.0625rem solid #CFCFCF;
+                &.lazyloaded {
+                    filter: unset;
+                }
+            }
+            .text {
+                padding: 2rem 1.45rem 1rem 1.7rem;
+            }
+            h3 {
+                font-weight: bold;
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+                margin-bottom: 1rem;
+            }
+            h4 {
+                font-weight: 600;
+                font-size: 0.875rem;
+                line-height: 1.0625rem; 
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+                margin-bottom: 1rem;
+            }
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 43.75rem;
+                padding: 4.6875rem 4.625rem 4.6875rem 4.125rem;
+                .text {
+                    padding: 2rem 0;
+                }
+                h3 {
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                    margin-bottom: 1.25rem;
+                }
+                h4 {
+                    font-size: 1rem;
+                    line-height: 1.25rem; 
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.25rem;
+                    margin-bottom: 1.25rem;
+                }
+            }
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+                width: 62.5rem;
+                padding: 6.6875rem 5.9375rem 6.6875rem 5.875rem;
+                .text {
+                    padding: 2.875rem 0;
+                }
+                h3 {
+                    font-size: 1.75rem;
+                    line-height: 2.125rem;
+                    margin-bottom: 1.5rem;
+                }
+                h4 {
+                    font-size: 1.375rem;
+                    line-height: 1.6875rem; 
+                }
+                p {
+                    font-size: 1.375rem;
+                    line-height: 1.6875rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}

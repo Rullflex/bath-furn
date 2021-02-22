@@ -61,5 +61,8 @@
                 line-height: 5.375rem;
             }
         }
+        &-brown {
+            @include btn-solid(#9D7A63, $text-light);
+        }
     }
 }

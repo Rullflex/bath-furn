@@ -52,9 +52,11 @@
         &__icons {
             display: flex;
             justify-content: space-between;
-            width: 10.9375rem;
+            // width: 10.9375rem;
+            width: 6rem;
             @media (min-width: map-get($grid-breakpoints, md)) {
-                width: 13.6875rem;
+                // width: 13.6875rem;
+                width: 7.5rem;
             }
             svg {
                 width: 2.5rem;
