@@ -28,7 +28,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
     UIkit.scrollspy(`#video`)
     document.querySelector(`#video`).addEventListener(`inview`, (event) => {
-        document.querySelector(`#video .popup__body`).insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
+        // document.querySelector(`#video .popup__body`).insertAdjacentHTML(`beforeend`, `<video class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/lpGr5OuS4mg" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
+        document.querySelector(`#video .popup__body`).insertAdjacentHTML(`beforeend`, `<video class="embed-responsive-item" src="/about.mp4" frameborder="0" allowfullscreen="true" controls playsinline data-uk-video data-uk-responsive"></video>`)
     })
 
     document.querySelectorAll(`a[href="tel:89819810880"]`).forEach( (elem, idx) => {
