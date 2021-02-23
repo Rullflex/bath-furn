@@ -26,13 +26,13 @@
 }
 .soc-icon {
     .animate {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        transition: all 0.4s cubic-bezier(.49,.44,.43,1);
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transition: all 0.3s cubic-bezier(.49,.44,.43,1);
     }
     &:hover {
         .animate {
-            stroke-dashoffset: 930;
+            stroke-dashoffset: 30;
         }
     }
 }
