@@ -267,8 +267,8 @@
 @media (min-width: map-get($grid-breakpoints, xl)) {
     .s1 {
         .container {
-            padding-top: 8.2rem;
-            padding-bottom: 75.5rem;
+            padding-top: 3.9rem;
+            padding-bottom: 82rem;
         }
         &__img {
             &-i1 {
@@ -287,18 +287,20 @@
             }
         }
         &__title {
-            width: 62.5rem;
-            margin-bottom: 3.9rem;
+            width: 633px;
+            margin-bottom: 1.3rem;
             margin-left: 49rem;
+            font-size: 50px;
+            line-height: 61px;
             span {}
         }
         &__subtitle {
-            font-size: 1.625rem;
+            font-size: 19px;
             line-height: 1.73em;
             margin-left: 49.3rem;
         }
         &__vbu {
-            top: 44.3rem;
+            top: 38.3rem;
             right: 26rem;
             &-txt {
                 width: 15.1875rem;
@@ -438,7 +440,6 @@
             }
         }
         &__descr {
-            width: 16.875rem;
             line-height: 3.4375rem;
             font-size: 1.375rem;
         }
@@ -478,14 +479,15 @@
             }
         }
         &__descr {
-            line-height: 3.9375rem;
-            font-size: 1.375rem;
+            width: 200px;
+            line-height: 45px;
+            font-size: 18px;
         }
         &__btn {
-            width: 16.875rem;
-            line-height: 4.6875rem;
-            font-size: 1.375rem;
-            margin: 2.5625rem 0 2.5rem;
+            width: 200px;
+            line-height: 55px;
+            font-size: 16px;
+            margin: 1.4rem 0 2rem;
         }
     }
 }
@@ -521,13 +523,14 @@
             }
         }
         &__descr {
-            line-height: 5rem;
-            font-size: 2rem;
-            width: 21.875rem;
+            font-size: 21px;
+            line-height: 55px;
+            width: 14.375rem;
         }
         &__btn {
-            width: 17.1875rem;
-            margin: 1.9375rem 0 2.625rem;
+            line-height: 65px;
+            width: 14.375rem;
+            margin: 1.4rem 0 2.6rem;
         }
     }
 }
@@ -1245,6 +1248,7 @@
     padding-bottom: 2.4375rem;
     @include bg(white);
     &__title {
+        font-weight: bold;
         color: $text-dark;
         margin-bottom: 1rem;
     }
@@ -1389,7 +1393,6 @@
             }
         }
         &-submit {
-            margin-top: 2rem;
             margin-bottom: 1.2rem;
         }
         &-star {
@@ -1403,32 +1406,20 @@
         padding-top: 3.625rem;
         padding-bottom: 6.6875rem;
         &__title {
+            font-size: 50px;
+            font-weight: bold;
             text-align: center;
-            margin-bottom: 3.775rem;
+            margin-bottom: 3rem;
         }
         &__form {
             &-options {
-                flex-wrap: wrap;
-                justify-content: space-between;
-                height: 5.55rem;
                 margin-bottom: 2.4875rem;
-                margin-left: 2.3rem;
-                label {
-                    width: 12.625rem;
-                    margin-bottom: 0;
-                    &:nth-child(3) {
-                        margin-left: 4rem;
-                    }
-                    &:nth-child(4) {
-                        margin-left: 4rem;
-                    }
-                }
+                margin-left: 7.1rem;
+                label {}
                 input {
                     &:checked ~ .box {}
                 }
-                .box {
-                    flex-shrink: 0;
-                }
+                .box {}
                 p {
                     font-size: 1.0625rem;
                     line-height: 1.3125rem;
@@ -1437,11 +1428,10 @@
             &-inputs {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 flex-wrap: wrap;
-                height: 19.3125rem;
             }
             &-submit {
-                margin-top: 2.8rem;
                 margin-bottom: 2.1rem;
             }
             &-star {
@@ -1455,25 +1445,14 @@
         padding-top: 5.425rem;
         padding-bottom: 14rem;
         &__title {
-            font-size:  2.1875rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.4rem;
         }
         &__form {
             &-options {
-                width: 42.25rem;
-                height: 4.3rem;
-                margin-bottom: 5.3875rem;
-                margin-left: 19rem;
+                margin-bottom: 0.5rem;
+                margin-left: 22.5rem;
                 label {
                     cursor: pointer;
-                    width: 21.125rem;
-                    margin-bottom: 0;
-                    &:nth-child(3) {
-                        margin-left: 0;
-                    }
-                    &:nth-child(4) {
-                        margin-left: 0;
-                    }
                 }
                 input {
                     &:checked ~ .box {}
@@ -1491,10 +1470,8 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 56.075rem;
-                height: 19.3125rem;
             }
             &-submit {
-                margin-top: 1.7rem;
                 margin-bottom: 2.1rem;
             }
             &-star {}
@@ -1506,18 +1483,14 @@
         padding-top: 2.5rem;
         padding-bottom: 12.3rem;
         &__title {
-            font-size:  3.75rem;
-            margin-bottom: 3.2rem;
         }
         &__form {
             &-options {
-                margin-left: 31.2rem;
-                margin-bottom: 5rem;
+                margin-left: 34.7rem;
             }
             &-inputs {
             }
             &-submit {
-                margin-top: 0.5rem;
                 margin-bottom: 1.2rem;
             }
             &-star {}
@@ -1525,34 +1498,30 @@
     }
 }
 .s8 {
-    padding-top: 5.75rem;
     padding-bottom: 4.125rem;
-    &__loc {
-
-    }
-    &__info {
-        padding-top: 2rem;
-        width: 100%;
-        height: 10.625rem;
-        background: $primary;
-        text-align: center; 
-        &-tel {
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
-        &-adress {
-            font-size: 0.875rem;
-            line-height: 1.0625rem;
-            margin-top: 0.8rem;
-        }
-        &-mail {
-            font-size: 0.875rem;
-        }
-    }
+    // &__info {
+    //     padding-top: 2rem;
+    //     width: 100%;
+    //     height: 10.625rem;
+    //     background: $primary;
+    //     text-align: center; 
+    //     &-tel {
+    //         font-weight: bold;
+    //         font-size: 1.25rem;
+    //     }
+    //     &-adress {
+    //         font-size: 0.875rem;
+    //         line-height: 1.0625rem;
+    //         margin-top: 0.8rem;
+    //     }
+    //     &-mail {
+    //         font-size: 0.875rem;
+    //     }
+    // }
     &__map {
-        width: 100%;
-        height: 23.9375rem;
-        position: relative;
+        width: 20rem;
+        height: 24rem;
+        @include center-item-x('relative');
         background: white;
         .ibg {
             position: absolute;
@@ -1564,7 +1533,7 @@
         &-pin {
             position: absolute;
             top: 9.55rem;
-            left: 1.25rem;
+            left: 2.25rem;
             width: 2rem;
         }
         &-adress {
@@ -1578,16 +1547,37 @@
             color: #000000;
             position: absolute;
             top: 9.15rem;
-            left: 3.9rem;
+            left: 4.9rem;
         }
     }
+    &__foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__adr-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__logo {
-        position: absolute;
-        bottom: 8.1875rem;
-        left: 1.9375rem;
+        margin: 1.3125rem auto 0.8125rem;
         &-img {
-            width: 4.0625rem;
+            width: 6.125rem;
         }
+    }
+    &__mail {
+        font-size: 0.875rem;
+        margin: 0 auto 2.1875rem;
+    }
+    &__tel {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+    &__adress {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
     }
     &__line {
         position: absolute;
@@ -1596,12 +1586,6 @@
         height: 8.5rem;
         width: 0.125rem;
         background: white;
-    }
-    &__foot {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 7.75rem;
     }
     &__icons {
         display: flex;
@@ -1620,32 +1604,32 @@
 }
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s8 {
-        padding-top: 5.875rem;
-        padding-bottom: 6.9375rem;
+        padding-bottom: 3.1875rem;
         &__loc {}
-        &__info {
-            padding-top: 3.5rem;
-            height: 14.875rem;
-            &-tel {
-                font-size: 1.875rem;
-            }
-            &-adress {
-                font-size: 1rem;
-                line-height: 1.25rem;
-                margin-top: 0.8rem;
-                margin-bottom: 0.5rem;
-            }
-            &-mail {
-                font-size: 1rem;
-            }
-        }
+        // &__info {
+        //     padding-top: 3.5rem;
+        //     height: 14.875rem;
+        //     &-tel {
+        //         font-size: 1.875rem;
+        //     }
+        //     &-adress {
+        //         font-size: 1rem;
+        //         line-height: 1.25rem;
+        //         margin-top: 0.8rem;
+        //         margin-bottom: 0.5rem;
+        //     }
+        //     &-mail {
+        //         font-size: 1rem;
+        //     }
+        // }
         &__map {
-            height: 33.75rem;
+            width: 48rem;
+            height: 47.5rem;
             .ibg {}
             &-pin {
                 width: 2.75rem;
-                top: 13.4rem;
-                left: 11.8rem;
+                top: 23.4rem;
+                left: 11.3rem;
             }
             &-adress {
                 padding: 0.875rem 0 0 1.5625rem;
@@ -1653,39 +1637,55 @@
                 height: 5.125rem;
                 box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
                 font-size: 0.875rem;
-                top: 13rem;
-                left: 15.4rem;
+                top: 23rem;
+                left: 15rem;
             }
         }
+        &__foot {
+            margin-top: 3rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__adr-wrap {
+            align-items: flex-start;
+        }
         &__logo {
-            bottom: 0;
-            left: 20.3rem;
-            &-img {
-                width: 5.75rem;
-            }
+            @include center-item-x();
+            bottom: 34px;
+            &-img {}
+        }
+        &__mail {
+            font-size: 0.875rem;
+            margin: 0 auto 2.1875rem;
+            display: none;
+        }
+        &__tel {
+            font-size: 25px;
+            margin-bottom: 0.25rem;
+        }
+        &__adress {
+            font-size: 13px;
+            margin-bottom: 1rem;
         }
         &__line {
             bottom: -8rem;
             left: 20.3rem;
         }
-        &__foot {
-            flex-direction: row-reverse;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-top: 4.1875rem;
-        }
+
         &__icons {
             // width: 10.875rem;
             width: 6rem;
-            margin-top: 0.4rem;
-            margin-right: 2.4rem;
+            margin-top: 0;
+            margin-right: 0;
             svg {
                 width: 2.5rem;
             }
         }
         &__copy {
+            @include center-item-x();
             font-size: 0.8125rem;
             margin-top: 0;
+            bottom: 0;
         }
         &__circle {
             position: absolute;
@@ -1697,101 +1697,110 @@
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s8 {
         padding-top: 0;
-        padding-bottom: 3.6875rem;
-        &__loc {
-            display: flex;
-            flex-direction: row-reverse;
-            margin-top: -7.5rem;
-            margin-left: -1.7rem;
-            height: 23.25rem;
-            width: 71.25rem;
-        }
-        &__info {
-            padding-top: 6.5rem;
-            padding-left: 5.6875rem;
-            width: 26.875rem;
-            height: 100%;
-            text-align: left;
-            &-tel {
-                font-size: 1.875rem;
-            }
-            &-adress {
-                margin-top: 0.8rem;
-                margin-bottom: 0.5rem;
-            }
-            &-mail {
-            }
-        }
+        padding-bottom: 52px;
+        // &__loc {
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        //     margin-top: -7.5rem;
+        //     margin-left: -1.7rem;
+        //     height: 23.25rem;
+        //     width: 71.25rem;
+        // }
+        // &__info {
+        //     padding-top: 6.5rem;
+        //     padding-left: 5.6875rem;
+        //     width: 26.875rem;
+        //     height: 100%;
+        //     text-align: left;
+        //     &-tel {
+        //         font-size: 1.875rem;
+        //     }
+        //     &-adress {
+        //         margin-top: 0.8rem;
+        //         margin-bottom: 0.5rem;
+        //     }
+        //     &-mail {
+        //     }
+        // }
         &__map {
-            width: 44.625rem;
-            height: 100%;
+            width: 1260px;
+            height: 494px;
             .ibg {}
             &-pin {
-                top: 7.6rem;
-                left: 10.3rem;
+                top: 13.6rem;
+                left: 36.3rem;
             }
             &-adress {
-                top: 7.1rem;
-                left: 13.8rem;
+                top: 13.1rem;
+                left: 39.8rem;
             }
-        }
-        &__logo {
-            bottom: 1.5rem;
-            left: 35.9rem;
-            &-img {
-                width: 5.75rem;
-            }
-        }
-        &__line {
-            height: 4.1875rem;
-            bottom: -1.9rem;
-            left: 35.9rem;
         }
         &__foot {
-            align-items: center;
-            margin-top: 4.7875rem;
+            margin-top: 33px;
+            align-items: flex-start;
         }
-        &__icons {
-            margin-top: 0;
-            margin-right: 1.4rem;
-            svg {}
+        &__adr-wrap {
         }
-        &__copy {}
-        &__circle {
-            top: 10.8rem;
+        &__logo {
+            bottom: 14px;
+            &-img {}
         }
+        &__mail {
+            font-size: 16px;
+            margin: 0;
+            display: inline;
+            position: absolute !important;
+            right: 0;
+            bottom: 0;
+        }
+        &__tel {
+            font-weight: 600;
+            line-height: 1em;
+            font-size: 30px;
+            margin-bottom: 0.8rem;
+        }
+        &__adress {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+        &__copy {
+            bottom: -11px;
+        }
+        &__circle {}
     }
 }
 @media (min-width: map-get($grid-breakpoints, xl)) {
     .s8 {
         padding-top: 0;
-        padding-bottom: 8.8125rem;
-        &__loc {
-            margin-top: -3.1rem;
-            margin-left: -10.2rem;
-            height: 23.25rem;
-            width: 103.8125rem;
-        }
-        &__info {
-            width: 40.625rem;
-            &-tel {}
-            &-adress {}
-            &-mail {
-            }
-        }
+        // &__loc {
+        //     margin-top: -3.1rem;
+        //     margin-left: -10.2rem;
+        //     height: 23.25rem;
+        //     width: 103.8125rem;
+        // }
+        // &__info {
+        //     width: 40.625rem;
+        //     &-tel {}
+        //     &-adress {}
+        //     &-mail {
+        //     }
+        // }
         &__map {
-            width: 63.1875rem;
+            width: 1920px;
+            height: 620px;
             .ibg {}
             &-pin {
-                left: 29rem;
+                left: 55rem;
+                top: 18rem;
             }
             &-adress {
-                left: 32.5rem;
+                left: 58.5rem;
+                top: 17.5rem;
             }
         }
         &__logo {
-            bottom: 0;
-            left: 48.2rem;
+            bottom: 20px;
             &-img {}
         }
         &__line {
@@ -1802,11 +1811,10 @@
             margin-top: 3.75rem;
         }
         &__icons {
-            margin-right: 6.4rem;
+            // margin-right: 6.4rem;
             svg {}
         }
         &__copy {
-            margin-left: 5rem;
         }
         &__circle {
             top: 7.9rem;

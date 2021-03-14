@@ -9,14 +9,14 @@ block content
 	main.main
 		section.s1 
 			.container 
-				h1.s1__title Мебель для ванной комнаты #[span VIVO&nbsp;MOBILI]
+				h1.s1__title Мебель для ванной комнаты #[span VIVOMOBILI]
 				p.s1__subtitle Изготавливаем индивидуально по&nbsp;Вашим&nbsp;размерам от&nbsp;3&nbsp;недель с&nbsp;гарантией&nbsp;10&nbsp;лет
 				+picture-min(jpg, `${modules}s1-i1`, `${modules}_s1-i1`)(class="s1__img-i1")
 				+picture-min(jpg, `${modules}s1-i2`, `${modules}_s1-i2`)(class="s1__img-i2")
 				img.s1__img-circle.logo-circle(src=`${modulesIco}logo-circle.svg` alt="")
-				.s1__float-line-1
-				.s1__float-line-2
-				.s1__float-line-3
+				.s1__float-line-1.d-none
+				.s1__float-line-2.d-none
+				.s1__float-line-3.d-none
 				.s1__vbu 
 					.s1__vbu-txt Короткое видео о нас
 					a.s1__vbu-play(href="#video" data-uk-toggle) 
@@ -138,49 +138,48 @@ block content
 							.box
 							p Дизайнер
 						label 
-							input(type="checkbox" name="Монтажник / Установщик")
+							input(type="checkbox" name="PDF-инструкции по монтажу") 
 							.box
-							p Монтажник / Установщик
+							p PDF-инструкции#[br.d-md-none] по монтажу
 						label 
 							input(type="checkbox" name="3D модели" checked)
 							.box
 							p 3D модели
 						label 
-							input(type="checkbox" name="PDF-инструкции по монтажу") 
+							input(type="checkbox" name="Монтажник / Установщик")
 							.box
-							p PDF-инструкции#[br.d-lg-none] по монтажу
+							p Монтажник / Установщик
 					.s7__form-inputs
 						.input-wrap 
 							input.input(type="text" name="Имя" placeholder="Имя и Фамилия*")
 						.input-wrap 
 							input.input.phone(type="tel" name="Телефон" placeholder="Номер телефона*")
-						.input-wrap 
-							input.input(type="text" name="Организация" placeholder="Организация")
-						.input-wrap 
-							input.input(type="text" name="Город" placeholder="Город")
-						.input-wrap 
-							input.input(type="text" name="Сайт" placeholder="Сайт")
-						.input-wrap 
-							input.input(type="text" name="Instagram" placeholder="Instagram")
+						//- .input-wrap 
+						//- 	input.input(type="text" name="Организация" placeholder="Организация")
+						//- .input-wrap 
+						//- 	input.input(type="text" name="Город" placeholder="Город")
+						//- .input-wrap 
+						//- 	input.input(type="text" name="Сайт" placeholder="Сайт")
+						//- .input-wrap 
+						//- 	input.input(type="text" name="Instagram" placeholder="Instagram")
 					button.s7__form-submit.uk-button.btn-solid-submit(type="submit") Отправить заявку
 					p.s7__form-star * -обязательно для заполнения
 		section.s8#s8
 			.container
-				.s8__loc 
-					.s8__info
-						a.s8__info-tel.link(href=phoneLink)= phoneNumber
-						p.s8__info-adress Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
-						a.s8__info-mail.link(href=`mailto:${mailAdress}`)= mailAdress
-					.s8__map
-						.ibg 
-							+picture(jpg, `${modules}s7-i`, 'smlx')
-						+icon('pin', '#9D7A63')(class="s8__map-pin")
-						.s8__map-adress 
-							p Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
-				a.s8__logo(href="/")
-					img.s8__logo-img(src=`${modulesIco}logo.svg` alt="")
-				.s8__line
+				.s8__map
+					.ibg 
+						+picture(jpg, `${modules}s7-i`, 'smlx')
+					+icon('pin', '#9D7A63')(class="s8__map-pin")
+					.s8__map-adress 
+						p Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
 				.s8__foot
+					a.s8__logo(href="/")
+						img.s8__logo-img(src=`${modulesIco}logo.svg` alt="")
+					//- .s8__line
+					a.s8__mail.link(href=`mailto:${mailAdress}`)= mailAdress
+					.s8__adr-wrap
+						a.s8__tel.link(href=phoneLink)= phoneNumber
+						p.s8__adress Санкт-Петербург, 195027,#[br] Пискаревский проспект, 1
 					.s8__icons
 						a.soc-icon(href=instLink target="_blank")
 							+icon('social-inst') 
@@ -189,4 +188,4 @@ block content
 						a.soc-icon(href=fbLink target="_blank")
 							+icon('social-fb') 
 					p.s8__copy VIVOMOBILI© Copyright 2020
-				img.s8__circle.logo-circle.d-none.d-md-block(src=`${modulesIco}logo-circle.svg` alt="")
+				//- img.s8__circle.logo-circle.d-none(src=`${modulesIco}logo-circle.svg` alt="")
